@@ -255,7 +255,7 @@ class Vapid01(object):
 
     def _base_sign(self, claims):
         if not claims.get('exp'):
-            claims['exp'] = str(int(time.time()) + 86400)
+            claims['exp'] = str(int(time.time()) + 43200)
         if not re.match("mailto:.+@.+\..+",
                         claims.get('sub', ''),
                         re.IGNORECASE):
